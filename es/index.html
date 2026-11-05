@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Air 15 min — 200 Recetas Low Carb en Freidora de Aire en 15 Minutos</title>
+<meta name="description" content="200 recetas low carb en freidora de aire, listas en 15 minutos o menos, con los carbohidratos de cada una ya contados. Pan, pizza y brownie sin harina y sin azúcar.">
+<meta name="theme-color" content="#16352A">
+<meta property="og:title" content="Air 15 min — 200 Recetas Low Carb en Freidora de Aire en 15 Minutos">
+<meta property="og:description" content="200 recetas low carb en freidora de aire, listas en 15 minutos o menos, con los carbohidratos de cada una ya contados. Pan, pizza y brownie sin harina y sin azúcar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://air15min-es.vercel.app/">
+<meta property="og:image" content="https://air15min-es.vercel.app/img/hero-arte-1254.webp">
+<link rel="canonical" href="https://air15min-es.vercel.app/">
+<link rel="icon" href="img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-arte-760.webp" imagesrcset="img/hero-arte-760.webp 760w, img/hero-arte-1254.webp 1254w" imagesizes="(min-width: 980px) 560px, 100vw">
+<style>:root{
+  --oliva:#16352A;--oliva-deep:#0F2620;--musgo:#2F6B4F;--verde:#3E9E62;--verde-d:#348553;--neon:#5FD183;
+  --ambar:#C79A3E;--ambar-d:#AD832E;--ambar-t:#8A6A1E;--creme:#FBF8F2;--creme-soft:#F3ECDE;--linha:#EDE5D6;
+  --tinta:#2A2622;--tinta-2:#6F6659;--alerta:#C0392B;--traco:#C4622D;
+  --serif:'Playfair Display',Georgia,serif;--head:'Poppins',system-ui,sans-serif;--body:'Roboto',system-ui,sans-serif;
+  --sombra:0 18px 50px -20px rgba(20,30,5,.45);--sombra-card:0 10px 30px -12px rgba(20,30,5,.30);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--tinta);background:var(--creme);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+b{font-weight:700}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.estreito{max-width:760px}
+.centro{display:flex;justify-content:center;margin-top:32px}
+
+/* barra */
+.barra{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:8px;padding:9px 12px;background:var(--oliva);color:#fff;font:500 13px/1.2 var(--head);text-align:center}
+.barra b{font:700 15px var(--head);color:var(--neon);font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.relogio-ico{width:8px;height:8px;border-radius:50%;background:var(--neon)}
+@keyframes bip{70%{box-shadow:0 0 0 8px rgba(255,91,91,0)}100%{box-shadow:0 0 0 0 rgba(255,91,91,0)}}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:460px;padding:18px 26px;border-radius:60px;background:var(--verde);color:#fff;text-decoration:none;font:700 15.5px/1.2 var(--head);text-transform:uppercase;letter-spacing:.3px;text-align:center;box-shadow:0 12px 28px -8px rgba(62,158,98,.65);transition:transform .25s cubic-bezier(.2,.8,.2,1),background .25s,box-shadow .25s}
+.btn svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s}
+.btn:hover{background:var(--verde-d);transform:translateY(-2px)}
+.btn:hover svg{transform:translateX(3px)}
+.btn:active{transform:scale(.98)}
+.btn-ambar{background:var(--ambar);box-shadow:0 12px 28px -8px rgba(199,154,62,.7)}
+.btn-ambar:hover{background:var(--ambar-d)}
+.btn-grande{padding:21px 26px;font-size:17px}
+.pulso{animation:pulso 2.2s infinite}
+@keyframes pulso{0%,100%{box-shadow:0 12px 28px -8px rgba(62,158,98,.65),0 0 0 0 rgba(62,158,98,.45)}50%{box-shadow:0 12px 28px -8px rgba(62,158,98,.65),0 0 0 14px rgba(62,158,98,0)}}
+
+/* tipografia de seção */
+.sec{padding:64px 0}
+h2{font:800 clamp(29px,6.4vw,44px)/1.12 var(--serif);color:var(--oliva);text-align:center;letter-spacing:-.3px}
+h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--traco);margin:16px auto 0}
+h2.esq{text-align:left}
+h2.esq::after{margin-left:0}
+.kicker{font:700 13px var(--head);letter-spacing:.24em;text-transform:uppercase;color:var(--ambar-t);text-align:center;margin-bottom:10px}
+.dois .kicker{text-align:left}
+.kicker.claro{color:var(--ambar)}
+.lead{max-width:640px;margin:18px auto 0;text-align:center;font-size:17px;color:#3D372F}
+.fecho{margin-top:28px;text-align:center;font:500 18px/1.5 var(--head);color:var(--oliva)}
+
+/* hero */
+.hero{padding:28px 0 56px;background:radial-gradient(120% 70% at 50% 0%,#fff 0%,var(--creme) 55%,var(--creme-soft) 100%)}
+.hero-grid{display:grid;gap:26px}
+.pill{display:inline-block;padding:7px 14px;border-radius:40px;background:rgba(62,158,98,.12);color:var(--verde-d);font:600 13px var(--head)}
+.hero-txt{text-align:center}
+.hero h1{margin-top:16px;font:800 clamp(34px,8.6vw,60px)/1.06 var(--serif);color:var(--oliva);letter-spacing:-.5px}
+.hero h1 em{font-style:normal;color:var(--ambar)}
+.sub{margin:18px auto 0;max-width:560px;font:400 17.5px/1.55 var(--head);color:#3D372F}
+.sub b{color:var(--musgo)}
+.hero-vis{position:relative;margin:0 auto;width:min(100%,460px)}
+.hero-foto{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;box-shadow:var(--sombra)}
+.hero-vis .hero-phone{position:absolute;right:-6px;bottom:-26px;width:42%}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:40px;background:#fff;box-shadow:var(--sombra-card);font:600 13px var(--head);color:var(--oliva);white-space:nowrap}
+.chip i{width:10px;height:10px;border-radius:50%}
+.chip-a{left:-8px;top:22%}
+.chip-b{left:12px;bottom:12%}
+.so-mob,.so-desk{display:flex;flex-direction:column;align-items:center}
+.so-desk{display:none}
+.selos{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:9px;font:500 15px var(--head);color:#4A4438}
+.selos li{display:flex;align-items:center;gap:10px}
+.selos li span{display:grid;place-items:center;width:24px;height:24px;border-radius:7px;font-size:13px}
+.selos li:first-child span{background:var(--verde);color:#fff;font-weight:700}
+
+/* celular */
+.phone{position:relative;border-radius:34px;padding:7px;background:#111;box-shadow:0 30px 60px -20px rgba(0,0,0,.55),inset 0 0 0 2px #2a2a2a}
+.phone img{width:100%;aspect-ratio:390/844;object-fit:cover;object-position:top;border-radius:28px;background:var(--creme)}
+.phone::before{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:28%;height:16px;border-radius:12px;background:#111;z-index:1}
+
+/* dor */
+.dor{background:var(--creme)}
+.dores{list-style:none;margin-top:30px;display:grid;gap:12px}
+.dores li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:#fff;box-shadow:0 2px 14px -8px rgba(20,30,5,.25);font:500 16px/1.45 var(--head);color:#3D372F}
+.x{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(192,57,43,.1);color:var(--alerta);font-size:13px;font-weight:700}
+
+/* vitrine */
+.vitrine{background:#fff}
+.grade-receitas{margin-top:36px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card-r h3{margin-top:10px;font:600 15px/1.3 var(--head);color:var(--oliva)}
+.card-r p{margin-top:3px;font-size:13px;color:var(--tinta-2)}
+.card-foto{position:relative;overflow:hidden;border-radius:20px;box-shadow:var(--sombra-card)}
+.card-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s}
+.card-r:hover .card-foto img{transform:scale(1.05)}
+.carbo{position:absolute;left:10px;top:10px;padding:4px 10px;border-radius:30px;color:#fff;font:600 13px var(--head)}
+.rodape-vitrine{margin:28px auto 0;max-width:620px;text-align:center;color:#3D372F}
+
+/* como */
+.como{background:var(--creme-soft)}
+.dois{display:grid;gap:40px;align-items:center}
+.como-vis .phone{width:min(72%,300px);margin:0 auto}
+.lista-como{list-style:none;margin-top:26px;display:grid;gap:12px}
+.lista-como li{display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:16px;background:#fff;font:500 16px/1.4 var(--head);color:#3D372F}
+.lista-como li span{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:12px;background:var(--creme-soft);font-size:20px}
+
+/* semáforo */
+.grade-sem{margin-top:34px;display:grid;gap:14px}
+.sem{display:flex;gap:18px;align-items:center;padding:20px;border-radius:20px;background:#fff;border-top:5px solid var(--cor);box-shadow:var(--sombra-card)}
+.sem-num{flex:none;font:800 48px/1 var(--serif);color:var(--cor);min-width:76px;text-align:center}
+.sem h3{font:700 18px var(--head);color:var(--oliva)}
+.sem-faixa{font:600 13px var(--head);color:var(--cor);margin:2px 0 4px}
+.sem p:last-child{font-size:15px;color:#4A4438}
+
+/* benefícios */
+.beneficios{background:var(--creme-soft)}
+.grade-ben{margin-top:34px;display:grid;gap:14px}
+.ben{padding:24px;border-radius:22px;background:#fff;text-align:center;box-shadow:var(--sombra-card)}
+.ben-ico{display:inline-grid;place-items:center;width:58px;height:58px;border-radius:18px;background:var(--oliva);font-size:26px}
+.ben h3{margin-top:14px;font:700 19px var(--head);color:var(--oliva)}
+.ben p{margin-top:6px;color:#4A4438}
+
+/* app */
+.escuro{background:radial-gradient(90% 70% at 20% 0%,var(--musgo) 0%,var(--oliva) 55%,var(--oliva-deep) 100%);color:#fff}
+.escuro h2{color:#fff}
+.lista-app{list-style:none;margin-top:26px;display:grid;gap:12px}
+.lista-app li{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
+.lista-app b{display:block;font:700 17px var(--head);color:var(--neon)}
+.lista-app span{display:block;margin-top:3px;color:rgba(255,255,255,.78)}
+.app-vis{position:relative;height:clamp(420px,110vw,560px);max-width:440px;margin:0 auto;width:100%}
+.app-vis .phone{position:absolute;width:56%}
+.app-vis .tras{left:2%;top:0;transform:rotate(-6deg);opacity:.92}
+.app-vis .frente{right:2%;top:12%;transform:rotate(4deg)}
+
+/* bônus */
+.bonus{background:var(--creme)}
+.grade-bonus{margin-top:34px;display:grid;gap:16px}
+.card-b{display:flex;flex-direction:column;overflow:hidden;border-radius:24px;background:var(--oliva);color:#fff;box-shadow:var(--sombra)}
+.card-b img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.card-b-txt{padding:20px 22px 24px}
+.tag{display:inline-block;padding:4px 10px;border-radius:20px;background:var(--ambar);font:700 13px var(--head);letter-spacing:.08em;text-transform:uppercase}
+.card-b h3{margin-top:10px;font:800 23px/1.2 var(--serif)}
+.card-b p{margin-top:6px;color:rgba(255,255,255,.78)}
+.preco-b{font:500 14px var(--head)}
+.preco-b s{opacity:.6}
+.preco-b b{color:var(--neon);font-size:16px}
+
+/* oferta */
+.oferta{background:linear-gradient(180deg,var(--creme) 0%,var(--creme-soft) 100%)}
+.oferta-card{max-width:520px;margin:0 auto;padding:34px 22px 28px;border-radius:30px;background:#fff;box-shadow:var(--sombra);border:2px solid var(--verde);text-align:center}
+.oferta-card h2{font-size:clamp(28px,6vw,36px)}
+.oferta-lista{list-style:none;margin:24px 0 0;text-align:left;display:grid;gap:2px}
+.oferta-lista li{display:flex;align-items:center;gap:12px;padding:11px 2px;border-bottom:1px dashed var(--linha);font:500 15px/1.35 var(--head)}
+.oferta-lista .ok{display:grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--verde);color:#fff;font-size:13px;font-weight:700}
+.oferta-lista .t{flex:1}
+.oferta-lista s{color:var(--tinta-2);font-size:14px;white-space:nowrap}
+.total{display:flex;justify-content:space-between;margin-top:14px;font:600 16px var(--head)}
+.total s{color:var(--alerta)}
+.so-hoje{margin-top:20px;font:600 15px var(--head);color:var(--tinta-2)}
+.preco{margin-top:2px;font:800 clamp(40px,11vw,54px)/1.05 var(--head);color:var(--verde);letter-spacing:-1px}
+.avista{margin:4px 0 22px;font:600 16px var(--head);color:var(--oliva)}
+.oferta-card .btn{max-width:none}
+.oferta-selos{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:16px;font:500 13px var(--head);color:var(--tinta-2)}
+
+/* garantia */
+.garantia{background:var(--creme-soft);padding-top:24px}
+.garantia-in{display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;padding:30px 22px;border-radius:26px;background:#fff;box-shadow:var(--sombra-card)}
+.garantia-in h2.esq{text-align:center}
+.garantia-in h2.esq::after{margin:14px auto 0}
+.garantia-in p{margin-top:14px;color:#3D372F;font-size:16.5px}
+.selo-g{position:relative;flex:none;display:grid;place-items:center;align-content:center;width:132px;height:132px;color:#fff}
+.selo-g svg{position:absolute;inset:0;width:100%;height:100%}
+.selo-g circle:first-child{fill:var(--ambar)}
+.selo-g circle:last-child{fill:none;stroke:rgba(255,255,255,.55);stroke-width:1.5;stroke-dasharray:3 4}
+.selo-g b{position:relative;font:800 30px/1 var(--serif)}
+.selo-g span{position:relative;font:600 13px var(--head);letter-spacing:.12em;text-transform:uppercase}
+
+/* faq */
+.faq{background:var(--creme)}
+.faq h2{margin-bottom:28px}
+details{border-radius:18px;background:#fff;margin-bottom:10px;box-shadow:0 2px 14px -8px rgba(20,30,5,.25)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 20px;font:600 16px/1.4 var(--head);color:var(--oliva)}
+summary::-webkit-details-marker{display:none}
+.mais{position:relative;flex:none;margin-left:auto;width:28px;height:28px;border-radius:50%;background:var(--creme-soft)}
+.mais::before,.mais::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;border-radius:2px;background:var(--oliva);transform:translate(-50%,-50%);transition:transform .25s}
+.mais::after{transform:translate(-50%,-50%) rotate(90deg)}
+details[open] .mais::after{transform:translate(-50%,-50%) rotate(0)}
+details p{padding:0 20px 18px;color:#4A4438}
+
+/* final */
+.final{position:relative;overflow:hidden;background:var(--oliva-deep);color:#fff}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4}
+.final::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,38,32,.35),rgba(15,38,32,.92));z-index:1}
+.final-in{position:relative;z-index:2;padding:96px 20px;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
+.final h2{color:#fff}
+
+/* rodapé */
+.rodape{padding:36px 0 44px;background:var(--oliva-deep);color:rgba(255,255,255,.7);font-size:14px;text-align:center}
+.rodape p{margin-top:10px}
+.rodape p:first-child{display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;font:700 17px var(--head)}
+.rodape p:first-child img{border-radius:10px}
+.rodape a{color:#fff}
+.aviso{font-size:13px;color:rgba(255,255,255,.5);max-width:640px;margin-left:auto;margin-right:auto}
+
+@media (min-width:760px){
+  .sec{padding:92px 0}
+  .grade-receitas{grid-template-columns:repeat(4,1fr);gap:20px}
+  .grade-sem,.grade-ben,.grade-bonus{grid-template-columns:repeat(3,1fr)}
+  .sem{flex-direction:column;align-items:flex-start}
+  .sem-num{text-align:left}
+  .dois{grid-template-columns:1fr 1fr;gap:60px}
+  .como .dois>.como-vis{order:0}
+  .garantia-in{flex-direction:row;text-align:left;padding:36px 40px}
+  .garantia-in h2.esq{text-align:left}
+  .garantia-in h2.esq::after{margin-left:0}
+}
+@media (min-width:980px){
+  .hero{padding:64px 0 90px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;gap:56px}
+  .hero-txt{text-align:left}
+  .sub{margin-left:0}
+  .so-desk{display:flex;align-items:flex-start;margin-top:30px}
+  .so-mob{display:none}
+  .selos{flex-direction:row;flex-wrap:wrap;gap:10px 22px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.br-d{display:none}@media (min-width:980px){.br-d{display:inline}}
+@media (min-width:760px){.grade-receitas.n6,.grade-receitas.n3{grid-template-columns:repeat(3,1fr);max-width:860px;margin-left:auto;margin-right:auto}}
+/* aviso de cookies */
+.cookies{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;max-width:560px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 16px;border-radius:18px;background:#fff;box-shadow:0 18px 50px -12px rgba(0,0,0,.35);border:1px solid var(--linha);font:400 14px/1.45 var(--body);color:var(--tinta)}
+.cookies p{flex:1 1 240px}
+.cookies a{color:var(--musgo);font-weight:500}
+.cookies div{display:flex;gap:8px;margin-left:auto}
+.cookies button{border:0;border-radius:40px;padding:10px 16px;font:600 14px var(--head);cursor:pointer;background:var(--creme-soft);color:var(--tinta)}
+.cookies button.ok{background:var(--oliva);color:#fff}
+/* hero com arte pronta (título já na imagem) */
+.hero-arte{padding:0 0 48px}
+.hero-arte .wrap{padding:0}
+.hero-arte .hero-vis{width:100%;max-width:none}
+.hero-img{width:100%;height:auto;aspect-ratio:1/1;display:block}
+.hero-arte .hero-txt{padding:24px 20px 0;display:flex;flex-direction:column;align-items:center}
+.hero-arte h1{margin-top:0;font-size:clamp(26px,6.6vw,40px);line-height:1.15}
+.hero-arte h1 em{color:var(--musgo)}
+.hero-arte .btn{margin-top:24px}
+@media (min-width:980px){
+  .hero-arte{padding:56px 0 88px}
+  .hero-arte .wrap{padding:0 20px}
+  .hero-arte .hero-grid{grid-template-columns:1fr 1fr}
+  .hero-arte .hero-vis{order:2}
+  .hero-arte .hero-img{border-radius:28px;box-shadow:var(--sombra)}
+  .hero-arte .hero-txt{padding:0;align-items:flex-start}
+  .hero-arte .selos{flex-direction:column}
+}
+/* mockup do kit na oferta */
+.kit{margin:-34px -22px 24px;overflow:hidden;border-radius:28px 28px 0 0}
+.kit img{width:100%;height:auto;aspect-ratio:1/1;display:block}
+.kit figcaption{padding:10px 22px 0;font-size:13px;line-height:1.4;color:var(--tinta-2)}
+</style>
+</head>
+<body>
+
+<div class="barra"><span class="relogio-ico"></span>Oferta de lanzamiento · 7 días de garantía</div>
+
+<header class="hero hero-arte">
+  <div class="wrap hero-grid">
+    <div class="hero-vis">
+      <picture>
+        <source media="(min-width: 980px)" srcset="img/hero-arte-1254.webp">
+        <img class="hero-img" src="img/hero-arte-760.webp" srcset="img/hero-arte-760.webp 760w, img/hero-arte-1254.webp 1254w" sizes="(min-width: 980px) 560px, 100vw" width="1254" height="1254" alt="Air 15 min: 200 recetas low carb en freidora de aire en 15 minutos o menos. Libro y app en el celular junto a pizza low carb." fetchpriority="high">
+      </picture>
+    </div>
+    <div class="hero-txt">
+      <h1>Pan, pizza y brownie <em>sin harina y sin azúcar</em>, con los carbohidratos de cada receta ya contados</h1>
+      <p class="sub">Enciendes la freidora de aire y la cena está lista antes de que apriete el hambre. Libro en PDF + app en tu celular.</p>
+      <a class="btn " href="#oferta">Quiero mis 200 recetas<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><ul class="selos"><li><span>✓</span>Acceso inmediato en tu correo</li><li><span>🔒</span>Pago 100% seguro</li><li><span>🛡️</span>7 días de garantía</li></ul>
+    </div>
+  </div>
+</header>
+
+<section class="sec dor">
+  <div class="wrap estreito">
+    <p class="kicker">El problema</p>
+    <h2>¿Te suena familiar?</h2>
+    <ul class="dores"><li><span class="x">✕</span>Ya te cansaste del pollo con brócoli y la semana apenas empieza</li><li><span class="x">✕</span>Todas las recetas low carb piden un ingrediente caro que no encuentras</li><li><span class="x">✕</span>Llega la noche, estás cansado(a) y cocinar parece demasiado trabajo</li><li><span class="x">✕</span>Abandonas la dieta el miércoles, no por falta de ganas, sino por falta de opciones</li></ul>
+    <p class="fecho">Si te reconociste, el problema no eres tú. <b>Es el menú.</b> Y tiene arreglo.</p>
+  </div>
+</section>
+
+<section class="sec vitrine">
+  <div class="wrap">
+    <p class="kicker">La solución</p>
+    <h2>Low carb de verdad en 15 minutos</h2>
+    <p class="lead">Cada una de las 200 recetas cumple una regla: tiene que estar lista en 15 minutos o menos, con ingredientes de supermercado y sabor de comida de verdad. Si no da ganas de comerla, no entra.</p>
+    <div class="grade-receitas n8">
+      <article class="card-r">
+        <div class="card-foto"><img src="img/r026.webp" alt="Pan de nube de queso crema" loading="lazy"><span class="carbo" style="background:#3E9E62">1g de carbos</span></div>
+        <h3>Pan de nube de queso crema</h3>
+        <p>Panes · 15 min</p>
+      </article><article class="card-r">
+        <div class="card-foto"><img src="img/r041.webp" alt="Pizza de masa de queso y chorizo" loading="lazy"><span class="carbo" style="background:#3E9E62">3g de carbos</span></div>
+        <h3>Pizza de masa de queso y chorizo</h3>
+        <p>Pizzas · 14 min</p>
+      </article><article class="card-r">
+        <div class="card-foto"><img src="img/r143.webp" alt="Brownie de cacao en ramequín" loading="lazy"><span class="carbo" style="background:#3E9E62">4g de carbos</span></div>
+        <h3>Brownie de cacao en ramequín</h3>
+        <p>Postres · 13 min</p>
+      </article><article class="card-r">
+        <div class="card-foto"><img src="img/r055.webp" alt="Coxinhas low carb de pollo con queso crema" loading="lazy"><span class="carbo" style="background:#3E9E62">4g de carbos</span></div>
+        <h3>Coxinhas low carb de pollo con queso crema</h3>
+        <p>Aperitivos · 15 min</p>
+      </article><article class="card-r">
+        <div class="card-foto"><img src="img/r023.webp" alt="Panecillos de queso bajos en carbos en moldecitos" loading="lazy"><span class="carbo" style="background:#DFA02C">6g de carbos</span></div>
+        <h3>Panecillos de queso bajos en carbos en moldecitos</h3>
+        <p>Panes · 14 min</p>
+      </article><article class="card-r">
+        <div class="card-foto"><img src="img/r152.webp" alt="Pastel en taza de chocolate" loading="lazy"><span class="carbo" style="background:#3E9E62">4g de carbos</span></div>
+        <h3>Pastel en taza de chocolate</h3>
+        <p>Postres · 10 min</p>
+      </article><article class="card-r">
+        <div class="card-foto"><img src="img/r130.webp" alt="Lasaña de berenjena en ramequín" loading="lazy"><span class="carbo" style="background:#DFA02C">8g de carbos</span></div>
+        <h3>Lasaña de berenjena en ramequín</h3>
+        <p>Pastas · 15 min</p>
+      </article><article class="card-r">
+        <div class="card-foto"><img src="img/r147.webp" alt="Cheesecake en vasito con salsa de fresa" loading="lazy"><span class="carbo" style="background:#DFA02C">6g de carbos</span></div>
+        <h3>Cheesecake en vasito con salsa de fresa</h3>
+        <p>Postres · 15 min</p>
+      </article>
+    </div>
+    <p class="rodape-vitrine">Estas son solo 8 de las 200. Hay desayunos, panes, pizzas, antojitos, carnes, pescados, pastas, postres y viandas de la semana.</p>
+    <div class="centro"><a class="btn " href="#oferta">Ver las 200 recetas<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<section class="sec como">
+  <div class="wrap dois">
+    <div class="como-vis"><div class="phone "><img src="img/app-receita.webp" alt="Pantalla de la app Air 15 min en el celular" loading="lazy"></div></div>
+    <div>
+      <p class="kicker">Por dentro</p>
+      <h2 class="esq">Cada receta trae todo lo que necesitas</h2>
+      <ul class="lista-como"><li><span>⏱️</span>Tiempo total y temperatura exactos</li><li><span>🟢</span>Carbohidratos netos por porción, con semáforo</li><li><span>🔥</span>Calorías, proteína y grasa</li><li><span>👣</span>Paso a paso corto y numerado</li><li><span>💡</span>Un consejo con el error más común y un cambio más barato</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec semaforo">
+  <div class="wrap">
+    <p class="kicker">Semáforo de carbohidratos</p>
+    <h2>Sabes los carbos antes de abrir la freidora</h2>
+    <p class="lead">Carbohidratos netos = totales menos fibra, la cuenta de quien hace low carb de verdad.</p>
+    <div class="grade-sem">
+      <div class="sem" style="--cor:#3E9E62">
+        <div class="sem-num">106</div>
+        <div><h3>Recetas verdes</h3><p class="sem-faixa">Hasta 5 g por porción</p><p>Sirven para cetogénica. Puedes armar todo el día solo con ellas.</p></div>
+      </div><div class="sem" style="--cor:#DFA02C">
+        <div class="sem-num">64</div>
+        <div><h3>Recetas amarillas</h3><p class="sem-faixa">6 a 10 g por porción</p><p>Low carb estricta. Caben en tu meta diaria con holgura.</p></div>
+      </div><div class="sem" style="--cor:#D2703A">
+        <div class="sem-num">30</div>
+        <div><h3>Recetas naranjas</h3><p class="sem-faixa">11 a 15 g por porción</p><p>Low carb moderada, para una comida del día.</p></div>
+      </div>
+    </div>
+    <p class="fecho">Ninguna receta pasa de 15 g por porción. Abre cualquier página sin miedo.</p>
+  </div>
+</section>
+
+<section class="sec beneficios">
+  <div class="wrap">
+    <h2>Por qué funciona</h2>
+    <div class="grade-ben">
+      <div class="ben"><span class="ben-ico">⏱️</span><h3>Lista en 15 minutos</h3><p>Sin olla, sin estufa, sin lavar de más. La freidora de aire cocina y tú solo sirves.</p></div><div class="ben"><span class="ben-ico">🧮</span><h3>Carbohidratos ya contados</h3><p>Cero aplicaciones para contar, cero cálculos. Está en la propia receta.</p></div><div class="ben"><span class="ben-ico">🛒</span><h3>Ingredientes de supermercado</h3><p>Nada caro ni difícil de encontrar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec app escuro">
+  <div class="wrap dois">
+    <div>
+      <p class="kicker claro">También en tu celular</p>
+      <h2 class="esq">Se convierte en una app en tu pantalla de inicio</h2>
+      <ul class="lista-app"><li><b>Búsqueda y categorías</b><span>Encuentra la receta por nombre o por el ingrediente que tienes en el refri.</span></li><li><b>Temporizador paso a paso</b><span>Modo cocinar con letra grande y alarma en cada etapa.</span></li><li><b>Favoritos sin internet</b><span>Guarda las que más te gustan. Funciona sin conexión.</span></li></ul>
+    </div>
+    <div class="app-vis"><div class="phone tras"><img src="img/app-home.webp" alt="Pantalla de la app Air 15 min en el celular" loading="lazy"></div><div class="phone frente"><img src="img/app-cozinhar.webp" alt="Pantalla de la app Air 15 min en el celular" loading="lazy"></div></div>
+  </div>
+</section>
+
+<section class="sec bonus">
+  <div class="wrap">
+    <p class="kicker">🎁 Gratis hoy</p>
+    <h2>Lo que llega junto con las 200 recetas</h2>
+    <p class="lead">Tres guías que resuelven lo que el libro solo no resuelve: qué comer cada día, cómo no aburrirte del mismo sabor y cuántos carbohidratos tiene la comida fuera de las recetas.</p>
+    <div class="grade-bonus">
+      <article class="card-b">
+        <img src="img/cardapio.webp" alt="Menú de 30 Días Low Carb" loading="lazy">
+        <div class="card-b-txt">
+          <span class="tag">Bono 1</span>
+          <h3>Menú de 30 Días Low Carb</h3>
+          <p>Desayuno, almuerzo, cena y postre armados día por día con las recetas del libro, con lista de compras semanal.</p>
+          <p class="preco-b"><s>Antes USD 10</s> hoy <b>GRATIS</b></p>
+        </div>
+      </article><article class="card-b">
+        <img src="img/molhos.webp" alt="30 Salsas y Condimentos Low Carb" loading="lazy">
+        <div class="card-b-txt">
+          <span class="tag">Bono 2</span>
+          <h3>30 Salsas y Condimentos Low Carb</h3>
+          <p>Lo que hace que el mismo pollo sepa distinto toda la semana.</p>
+          <p class="preco-b"><s>Antes USD 7</s> hoy <b>GRATIS</b></p>
+        </div>
+      </article><article class="card-b">
+        <img src="img/tabela.webp" alt="Tabla de Carbohidratos de los Alimentos" loading="lazy">
+        <div class="card-b-txt">
+          <span class="tag">Bono 3</span>
+          <h3>Tabla de Carbohidratos de los Alimentos</h3>
+          <p>Los carbohidratos netos de 150 alimentos del día a día, con el mismo semáforo.</p>
+          <p class="preco-b"><s>Antes USD 6</s> hoy <b>GRATIS</b></p>
+        </div>
+      </article>
+    </div>
+    <div class="centro"><a class="btn btn-ambar" href="#oferta">Quiero todo esto ahora<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<section class="sec oferta" id="oferta">
+  <div class="wrap">
+    <div class="oferta-card">
+      <figure class="kit">
+        <img src="img/kit-760.webp" srcset="img/kit-760.webp 760w, img/kit-1254.webp 1254w" sizes="(min-width: 560px) 520px, 100vw" width="1254" height="1254" loading="lazy" alt="Kit Air 15 min: libro con 200 recetas, app en el celular, Menú de 30 Días, 30 Salsas y Condimentos y Tabla de Carbohidratos de los Alimentos, además de los extras opcionales.">
+        <figcaption>Porciones Congelables, Guía de Hábitos 21 Días y Aperitivos y Fiesta son extras opcionales que se ofrecen en el checkout.</figcaption>
+      </figure>
+      <p class="kicker">Oferta de lanzamiento</p>
+      <h2>Air 15 min completo</h2>
+      <ul class="oferta-lista"><li><span class="ok">✓</span><span class="t">200 recetas en PDF y en la app</span><s>USD 17</s></li><li><span class="ok">✓</span><span class="t">Carbohidratos netos y semáforo en cada receta</span><s>USD 7</s></li><li><span class="ok">✓</span><span class="t">Bono: Menú de 30 Días</span><s>USD 10</s></li><li><span class="ok">✓</span><span class="t">Bono: 30 Salsas y Condimentos</span><s>USD 7</s></li><li><span class="ok">✓</span><span class="t">Bono: Tabla de Carbohidratos de los Alimentos</span><s>USD 6</s></li></ul>
+      <div class="total"><span>Valor total</span><s>USD 47</s></div>
+      <p class="so-hoje">Precio de lanzamiento:</p>
+      <p class="preco">USD 7.99</p>
+      <p class="avista">pago único · acceso de por vida</p>
+      <a class="btn btn-grande pulso" href="https://pay.hotmart.com/N104515292Y?checkoutMode=10" data-checkout>Sí, quiero comer bien sin sufrir<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="oferta-selos"><span>📧 Recibe el acceso en tu correo</span><span>🔒 Compra segura</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec garantia">
+  <div class="wrap estreito garantia-in">
+    <div class="selo-g"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56"/><circle cx="60" cy="60" r="46"/></svg><b>7 días</b><span>de garantía</span></div>
+    <div><h2 class="esq">Satisfacción garantizada y riesgo cero</h2><p>Pruébalo por 7 días. Si por cualquier motivo no te gusta, te devolvemos el 100% de tu dinero, sin preguntas. El riesgo es todo nuestro.</p></div>
+  </div>
+</section>
+
+<section class="sec faq">
+  <div class="wrap estreito">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Cómo recibo el material?<span class="mais"></span></summary><p>El acceso es 100% digital e inmediato. Apenas se confirma el pago, recibes el enlace en tu correo. Puedes abrirlo en el celular, la tableta o la computadora.</p></details><details><summary>¿Sirve si hago cetogénica?<span class="mais"></span></summary><p>Sí. Las recetas verdes tienen hasta 5 g de carbohidratos netos por porción y puedes armar todo el día solo con ellas.</p></details><details><summary>¿Necesito ingredientes caros, como harina de almendras?<span class="mais"></span></summary><p>Las recetas usan ingredientes de supermercado. Cuando una pide algo más caro, el consejo trae el cambio económico.</p></details><details><summary>Ya intenté hacer pan low carb y no me salió.<span class="mais"></span></summary><p>Casi siempre el error es la temperatura alta: la masa sin trigo se dora por fuera antes de cocinarse por dentro. Aquí cada receta trae tiempo y temperatura exactos.</p></details><details><summary>¿Los carbohidratos que muestra son totales o netos?<span class="mais"></span></summary><p>Netos (totales menos fibra), por porción, además de calorías, proteína y grasa. Son valores de referencia calculados a partir de los ingredientes.</p></details><details><summary>¿Sirve en mi freidora de aire?<span class="mais"></span></summary><p>En cualquier modelo. Los tiempos están pensados para modelos de 4 a 5 litros, con consejos para ajustar si la tuya es más chica o más potente.</p></details><details><summary>¿Necesito saber cocinar?<span class="mais"></span></summary><p>No. Paso a paso corto y numerado, y todas quedan listas en 15 minutos o menos.</p></details><details><summary>¿Por cuánto tiempo tengo acceso?<span class="mais"></span></summary><p>Para siempre. Sin mensualidades.</p></details><details><summary>¿Puedo usarlo en el celular como app?<span class="mais"></span></summary><p>Sí. Puedes instalarla en la pantalla de inicio y usarla sin internet, con búsqueda, favoritos y temporizador.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <img src="img/final.webp" alt="Plato de pollo con verduras y queso junto a la freidora de aire" loading="lazy">
+  <div class="final-in wrap estreito">
+    <h2>Hoy en la noche la cena puede estar lista en 15 minutos.</h2>
+    <a class="btn btn-grande" href="https://pay.hotmart.com/N104515292Y?checkoutMode=10" data-checkout>Quiero comer bien sin sufrir<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<footer class="rodape">
+  <div class="wrap">
+    <p><img src="img/icon-192.png" alt="Air 15 min" width="36" height="36"> <b>Air 15 min</b></p>
+    <p>Soporte: <a href="mailto:soporte@air15min.com">soporte@air15min.com</a> · <a href="termos.html">Términos de uso</a> · <a href="privacidade.html">Política de privacidad</a></p>
+    <p class="aviso">Este material es informativo y no reemplaza la orientación de un médico o nutricionista. Los valores nutricionales son aproximados. Los resultados varían según cada persona.</p>
+    <p class="aviso">© 2026 Air 15 min. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>window.AIR15={"pixel":"2054128218991406","moeda":"USD","valor":7.99,"cookies":{"texto":"Usamos cookies y el Píxel de Meta para medir nuestros anuncios.","saiba":"Más información","recusar":"Rechazar","ok":"Ok"}}</script>
+<script>// Rastreamento Meta da página (Pixel + /api/capi com o mesmo event_id) e parâmetros do checkout.
+// O build injeta window.AIR15 = { pixel, moeda, valor, cookies: { texto, ok, recusar, saiba } }.
+(function () {
+  var C = window.AIR15 || {}
+  var CHAVE = 'air15:cookies'
+  var qs = new URLSearchParams(location.search)
+
+  function lerConsent() { try { return localStorage.getItem(CHAVE) } catch (e) { return null } }
+  function gravarConsent(v) { try { localStorage.setItem(CHAVE, v) } catch (e) {} }
+  var recusou = lerConsent() === 'recusado'
+
+  // ---------- parâmetros para o checkout Hotmart (src, sck, utm_*, fbclid) ----------
+  var CAMPOS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'sck', 'fbclid']
+  var params = {}
+  CAMPOS.forEach(function (k) { var v = qs.get(k); if (v) params[k] = v })
+  if (!params.sck) {
+    var utms = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].map(function (k) { return params[k] || '' })
+    if (utms.join('')) params.sck = utms.join('|').replace(/\|+$/, '')
+  }
+  document.querySelectorAll('a[data-checkout]').forEach(function (a) {
+    var h = a.getAttribute('href')
+    if (!h || h.indexOf('http') !== 0) return
+    var u = new URL(h)
+    Object.keys(params).forEach(function (k) { if (!u.searchParams.has(k)) u.searchParams.set(k, params[k]) })
+    a.href = u.toString()
+  })
+
+  // ---------- cookies _fbp / _fbc (o Pixel reaproveita os que já existem) ----------
+  function cookie(n) { var m = document.cookie.match('(?:^|; )' + n + '=([^;]*)'); return m ? decodeURIComponent(m[1]) : '' }
+  function setCookie(n, v, dias) {
+    document.cookie = n + '=' + v + '; path=/; max-age=' + dias * 86400 + '; SameSite=Lax' + (location.protocol === 'https:' ? '; Secure' : '')
+  }
+  function identificadores() {
+    var fbp = cookie('_fbp')
+    if (!fbp) { fbp = 'fb.1.' + Date.now() + '.' + Math.floor(Math.random() * 1e10); setCookie('_fbp', fbp, 90) }
+    var fbc = cookie('_fbc'), clid = qs.get('fbclid')
+    if (clid && (!fbc || fbc.split('.').slice(3).join('.') !== clid)) { fbc = 'fb.1.' + Date.now() + '.' + clid; setCookie('_fbc', fbc, 90) }
+    return { fbp: fbp, fbc: fbc || undefined }
+  }
+
+  // ---------- Pixel ----------
+  function carregarPixel() {
+    if (!C.pixel || window.fbq) return
+    !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js')
+    window.fbq('init', C.pixel)
+  }
+
+  var produto = { content_name: 'Air 15 min', content_ids: ['air15min'], content_type: 'product' }
+  function evento(nome, comValor) {
+    if (recusou || !C.pixel) return
+    var id = nome + '.' + Date.now().toString(36) + '.' + Math.random().toString(36).slice(2, 10)
+    var cd = nome === 'PageView' ? {} : Object.assign({}, produto, comValor && C.valor ? { value: C.valor, currency: C.moeda } : {})
+    var ids = identificadores()
+    if (window.fbq) window.fbq('track', nome, cd, { eventID: id })
+    var corpo = JSON.stringify({ event_name: nome, event_id: id, event_source_url: location.href, fbp: ids.fbp, fbc: ids.fbc, custom_data: cd })
+    try {
+      // sendBeacon sobrevive à troca de página (clique no checkout)
+      if (navigator.sendBeacon && navigator.sendBeacon('api/capi', new Blob([corpo], { type: 'application/json' }))) return
+      fetch('api/capi', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: corpo, keepalive: true }).catch(function () {})
+    } catch (e) {}
+  }
+
+  function iniciar() {
+    identificadores()
+    carregarPixel()
+    evento('PageView')
+    // ViewContent: chegou na oferta
+    var oferta = document.getElementById('oferta')
+    if (oferta && 'IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (es) {
+        if (es[0].isIntersecting) { evento('ViewContent', true); obs.disconnect() }
+      }, { threshold: 0.25 })
+      obs.observe(oferta)
+    }
+  }
+  // InitiateCheckout: clique em qualquer botão de compra
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-checkout]')
+    if (a) evento('InitiateCheckout', true)
+  }, true)
+
+  // ---------- aviso de cookies (LGPD): mede por padrão, "Recusar" desliga e apaga os cookies ----------
+  function aviso() {
+    if (lerConsent() || !C.cookies) return
+    var d = document.createElement('div')
+    d.className = 'cookies'
+    d.setAttribute('role', 'dialog')
+    d.innerHTML = '<p>' + C.cookies.texto + ' <a href="privacidade.html">' + C.cookies.saiba + '</a></p>' +
+      '<div><button type="button" data-v="recusado">' + C.cookies.recusar + '</button><button type="button" data-v="aceito" class="ok">' + C.cookies.ok + '</button></div>'
+    d.addEventListener('click', function (e) {
+      var v = e.target.getAttribute && e.target.getAttribute('data-v')
+      if (!v) return
+      gravarConsent(v)
+      if (v === 'recusado') {
+        recusou = true
+        if (window.fbq) window.fbq('consent', 'revoke')
+        setCookie('_fbp', '', 0); setCookie('_fbc', '', 0)
+      }
+      d.remove()
+    })
+    document.body.appendChild(d)
+  }
+
+  if (!recusou) iniciar()
+  aviso()
+})()
+</script>
+</body>
+</html>
