@@ -2,7 +2,7 @@
 export const CONFIG = {
   pt: {
     site: 'https://air15min-pt.vercel.app', // URL pública (og:image/canonical)
-    checkout: 'https://pay.hotmart.com/E108152695K?checkoutMode=10', // checkout real PT (George, 22/10, substitui off=nb62lhn2)
+    checkout: 'https://pay.hotmart.com/D108355411J?checkoutMode=10', // checkout real PT (George, 22/10, substitui off=nb62lhn2)
     appUrl: '',            // link do app PT (opcional, só para referência)
     suporte: 'suporte@air15min.com', // TODO e-mail real
     preco: { parcelas: '4x de R$ 9,09', avista: 'ou R$ 29,84 no PIX', total: 'R$ 220', valor: 29.84, moeda: 'BRL' },
@@ -10,7 +10,7 @@ export const CONFIG = {
   },
   es: {
     site: 'https://air15min-es.vercel.app',
-    checkout: 'https://pay.hotmart.com/N104515292Y?checkoutMode=10', // checkout real ES (George, 22/10, substitui off=wbrtqd8w)
+    checkout: 'https://pay.hotmart.com/D108355411J?checkoutMode=10', // checkout real ES (George, 22/10, substitui off=wbrtqd8w)
     appUrl: '',
     suporte: 'soporte@air15min.com', // TODO correo real
     preco: { parcelas: 'USD 7.99', avista: 'pago único · acceso de por vida', total: 'USD 47', valor: 7.99, moeda: 'USD' }, // preço oficial ES (George, 22/10)
