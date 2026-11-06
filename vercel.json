@@ -1,0 +1,7 @@
+{
+  "buildCommand": "rm -rf public && mkdir -p public/pt && cp -r es/. public/ && cp -r pt/. public/pt/",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/pt/api/capi", "destination": "/api/capi" }
+  ]
+}
