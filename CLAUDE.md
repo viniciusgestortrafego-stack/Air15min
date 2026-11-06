@@ -34,7 +34,7 @@ vercel.json  package.json  README.md
 - O `rastreio.js` anexa `utm_*`, `src`, `sck`, `fbclid` aos links com `data-checkout`.
 
 ## Rastreio (Meta)
-- Pixel `2054128218991406`. Eventos: PageView, ViewContent (ao chegar na oferta), InitiateCheckout (clique no checkout), com o mesmo `event_id` no Pixel e na CAPI para deduplicar. Aviso de cookies: "Recusar" desliga o rastreio.
+- Pixel `3203993276469305`. Eventos: PageView, ViewContent (ao chegar na oferta), InitiateCheckout (clique no checkout), com o mesmo `event_id` no Pixel e na CAPI para deduplicar. Aviso de cookies: "Recusar" desliga o rastreio.
 - `api/capi.js`: só POST; valida `event_name` e `event_id`; envia para `graph.facebook.com/v21.0/<pixel>/events`. Responde 204 mesmo quando falta token ou a Meta rejeita (o erro vai para os logs da Vercel); 400/405 para uso inválido.
 - Variáveis de ambiente (Vercel): `META_CAPI_TOKEN` (obrigatória, segredo do usuário), `META_PIXEL_ID` (opcional), `META_TEST_EVENT_CODE` (opcional, para o Testar eventos). **Ainda não validamos a entrega real à Meta.** Falta o usuário cadastrar `META_TEST_EVENT_CODE` e eu mandar um evento de teste.
 

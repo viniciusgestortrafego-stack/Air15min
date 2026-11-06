@@ -6,7 +6,7 @@
 ## Conversions API
 `api/capi.js` (função serverless da Vercel), usada pelas duas versões (`/pt/api/capi` é reescrito para `/api/capi`). Variáveis de ambiente do projeto:
 - `META_CAPI_TOKEN` (obrigatória): token da Conversions API. Sem ele a função responde 204 e não envia nada.
-- `META_PIXEL_ID` (opcional): padrão `2054128218991406`.
+- `META_PIXEL_ID` (opcional): padrão `3203993276469305`.
 - `META_TEST_EVENT_CODE` (opcional): código de "Testar eventos".
 
 ## Deploy (Vercel)

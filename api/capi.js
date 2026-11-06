@@ -1,9 +1,9 @@
 // Meta Conversions API (servidor). Recebe os eventos do rastreio.js e reenvia para a Meta
 // com o mesmo event_id do Pixel (a Meta deduplica). Variáveis de ambiente na Vercel:
 //   META_CAPI_TOKEN        (obrigatória) token de acesso da Conversions API
-//   META_PIXEL_ID          (opcional)    padrão: 2054128218991406
+//   META_PIXEL_ID          (opcional)    padrão: 3203993276469305
 //   META_TEST_EVENT_CODE   (opcional)    código de "Testar eventos" do Gerenciador de Eventos
-const PIXEL_PADRAO = '2054128218991406'
+const PIXEL_PADRAO = '3203993276469305'
 const EVENTOS = new Set(['PageView', 'ViewContent', 'InitiateCheckout'])
 
 function lerCorpo(req) {
