@@ -38,6 +38,21 @@
     return { fbp: fbp, fbc: fbc || undefined }
   }
 
+  // ---------- fbp/fbc no sck do checkout (a Hotmart devolve o sck na notificação de compra; o n8n lê daqui) ----------
+  function anexarIds() {
+    if (recusou) return
+    var ids = identificadores()
+    var extra = [ids.fbp, ids.fbc].filter(Boolean).join('|')
+    if (!extra) return
+    document.querySelectorAll('a[data-checkout]').forEach(function (a) {
+      var base = a.getAttribute('data-sck-base')
+      if (base === null) { base = new URL(a.href).searchParams.get('sck') || ''; a.setAttribute('data-sck-base', base) }
+      var u = new URL(a.href)
+      u.searchParams.set('sck', (base ? base + '|' : '') + extra)
+      a.href = u.toString()
+    })
+  }
+
   // ---------- Pixel ----------
   function carregarPixel() {
     if (!C.pixel || window.fbq) return
@@ -61,7 +76,7 @@
   }
 
   function iniciar() {
-    identificadores()
+    anexarIds()
     carregarPixel()
     evento('PageView')
     // ViewContent: chegou na oferta
@@ -76,7 +91,7 @@
   // InitiateCheckout: clique em qualquer botão de compra
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[data-checkout]')
-    if (a) evento('InitiateCheckout', true)
+    if (a) { anexarIds(); evento('InitiateCheckout', true) }
   }, true)
 
   // ---------- aviso de cookies (LGPD): mede por padrão, "Recusar" desliga e apaga os cookies ----------
