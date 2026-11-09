@@ -133,9 +133,12 @@ for (const lang of ['pt', 'es']) {
 ${heroArte ? `<meta property="og:image" content="${cfg.site}/img/hero-arte-1254.webp">` : tem('hero.webp') ? `<meta property="og:image" content="${cfg.site}/img/hero.webp">` : ''}
 <link rel="canonical" href="${cfg.site}/">
 <link rel="icon" href="img/icon-192.png">
+<script>window.AIR15=${JSON.stringify({ pixel: PIXEL, moeda: cfg.preco.moeda, valor: cfg.preco.valor, cookies: c.cookies })}</script>
+<script>${fs.readFileSync(path.join(import.meta.dirname, 'rastreio.js'), 'utf8')}</script>
+<link rel="preconnect" href="https://connect.facebook.net">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-${heroArte ? '<link rel="preload" as="image" href="img/hero-arte-760.webp" imagesrcset="img/hero-arte-760.webp 760w, img/hero-arte-1254.webp 1254w" imagesizes="(min-width: 980px) 560px, 100vw">' : tem('hero.webp') ? '<link rel="preload" as="image" href="img/hero.webp">' : ''}
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap"></noscript>
+${heroArte ? '<link rel="preload" as="image" href="img/hero-arte-760.webp" media="(max-width: 979px)" fetchpriority="high"><link rel="preload" as="image" href="img/hero-arte-1254.webp" media="(min-width: 980px)">' : tem('hero.webp') ? '<link rel="preload" as="image" href="img/hero.webp">' : ''}
 <style>${fs.readFileSync(path.join(import.meta.dirname, 'estilo.css'), 'utf8')}</style>
 </head>
 <body>
@@ -147,7 +150,7 @@ ${heroArte ? `<header class="hero hero-arte">
     <div class="hero-vis">
       <picture>
         <source media="(min-width: 980px)" srcset="img/hero-arte-1254.webp">
-        <img class="hero-img" src="img/hero-arte-760.webp" srcset="img/hero-arte-760.webp 760w, img/hero-arte-1254.webp 1254w" sizes="(min-width: 980px) 560px, 100vw" width="1254" height="1254" alt="${esc(c.altHeroArte)}" fetchpriority="high">
+        <img class="hero-img" src="img/hero-arte-760.webp" width="1254" height="1254" alt="${esc(c.altHeroArte)}" fetchpriority="high">
       </picture>
     </div>
     <div class="hero-txt">
@@ -329,8 +332,6 @@ ${heroArte ? `<header class="hero hero-arte">
   </div>
 </footer>
 
-<script>window.AIR15=${JSON.stringify({ pixel: PIXEL, moeda: cfg.preco.moeda, valor: cfg.preco.valor, cookies: c.cookies })}</script>
-<script>${fs.readFileSync(path.join(import.meta.dirname, 'rastreio.js'), 'utf8')}</script>
 </body>
 </html>`
 

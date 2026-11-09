@@ -2,6 +2,20 @@
   "buildCommand": "rm -rf public && mkdir -p public/pt && cp -r es/. public/ && cp -r pt/. public/pt/",
   "outputDirectory": "public",
   "rewrites": [
-    { "source": "/pt/api/capi", "destination": "/api/capi" }
+    {
+      "source": "/pt/api/capi",
+      "destination": "/api/capi"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.(webp|png)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    }
   ]
 }

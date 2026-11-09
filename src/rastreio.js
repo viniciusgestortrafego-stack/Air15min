@@ -1,5 +1,8 @@
 // Rastreamento Meta da página (Pixel + /api/capi com o mesmo event_id) e parâmetros do checkout.
 // O build injeta window.AIR15 = { pixel, moeda, valor, cookies: { texto, ok, recusar, saiba } }.
+// Roda no <head>, antes do CSS externo (fontes): Pixel e PageView saem na hora, para a Meta contar a
+// visualização da página de destino mesmo quando a pessoa sai cedo em rede móvel lenta. O que mexe
+// no HTML (links do checkout, ViewContent, aviso de cookies) espera o DOM ficar pronto.
 (function () {
   var C = window.AIR15 || {}
   var CHAVE = 'air15:cookies'
@@ -17,13 +20,15 @@
     var utms = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].map(function (k) { return params[k] || '' })
     if (utms.join('')) params.sck = utms.join('|').replace(/\|+$/, '')
   }
-  document.querySelectorAll('a[data-checkout]').forEach(function (a) {
-    var h = a.getAttribute('href')
-    if (!h || h.indexOf('http') !== 0) return
-    var u = new URL(h)
-    Object.keys(params).forEach(function (k) { if (!u.searchParams.has(k)) u.searchParams.set(k, params[k]) })
-    a.href = u.toString()
-  })
+  function prepararLinks() {
+    document.querySelectorAll('a[data-checkout]').forEach(function (a) {
+      var h = a.getAttribute('href')
+      if (!h || h.indexOf('http') !== 0) return
+      var u = new URL(h)
+      Object.keys(params).forEach(function (k) { if (!u.searchParams.has(k)) u.searchParams.set(k, params[k]) })
+      a.href = u.toString()
+    })
+  }
 
   // ---------- cookies _fbp / _fbc (o Pixel reaproveita os que já existem) ----------
   function cookie(n) { var m = document.cookie.match('(?:^|; )' + n + '=([^;]*)'); return m ? decodeURIComponent(m[1]) : '' }
@@ -76,9 +81,10 @@
   }
 
   function iniciar() {
-    anexarIds()
     carregarPixel()
     evento('PageView')
+  }
+  function observarOferta() {
     // ViewContent: chegou na oferta
     var oferta = document.getElementById('oferta')
     if (oferta && 'IntersectionObserver' in window) {
@@ -116,6 +122,13 @@
     document.body.appendChild(d)
   }
 
+  function quandoPronto() {
+    prepararLinks()
+    if (!recusou) { anexarIds(); observarOferta() }
+    aviso()
+  }
+
   if (!recusou) iniciar()
-  aviso()
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', quandoPronto)
+  else quandoPronto()
 })()

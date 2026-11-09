@@ -9,7 +9,7 @@ export const CONFIG = {
     ancoras: { livro: 'R$ 77', semaforo: 'R$ 30', cardapio: 'R$ 47', molhos: 'R$ 37', tabela: 'R$ 29' },
   },
   es: {
-    site: 'https://air15min-es.vercel.app',
+    site: 'https://air15min.vercel.app',
     checkout: 'https://pay.hotmart.com/D108355411J?checkoutMode=10', // checkout real ES (George, 22/10, substitui off=wbrtqd8w)
     appUrl: '',
     suporte: 'soporte@air15min.com', // TODO correo real
